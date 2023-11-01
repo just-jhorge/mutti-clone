@@ -18,7 +18,7 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <nav className="w-full h-28 border-b border-gray-300">
+        <nav className="w-full h-28 border-b border-gray-200">
             <div className="container w-full h-full flex items-center justify-between">
                 <div className="flex items-end gap-10">
                     <div className="relative w-24 h-8">
