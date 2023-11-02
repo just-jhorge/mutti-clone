@@ -17,6 +17,9 @@ module.exports = {
             },
         },
         extend: {
+            backgroundImage: {
+                cta: "url('/images/hero-background.jpg')",
+            },
             colors: {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
@@ -50,6 +53,9 @@ module.exports = {
                 card: {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
+                },
+                orange: {
+                    light: "#fcf9f3",
                 },
             },
             borderRadius: {
