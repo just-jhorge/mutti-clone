@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { IoMenuOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const categories = [
     { label: "Baby & Child Health", value: "baby-and-child-health" },
@@ -13,10 +14,10 @@ const CategoriesBar = () => {
     return (
         <section className="h-16 flex items-center justify-center text-sm">
             <div className="container flex items-center gap-10">
-                <div className="flex items-center gap-2">
+                <Button className="flex items-center gap-2 bg-transparent shadow-none text-black font-normal">
                     <IoMenuOutline size={23} />
                     <p>All Categories</p>
-                </div>
+                </Button>
                 <ul className="flex items-center gap-5">
                     {categories.map((category) => (
                         <li key={category.value}>

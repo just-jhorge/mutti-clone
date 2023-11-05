@@ -4,6 +4,7 @@ import Categories from "./components/Categories";
 import CategoriesBar from "./components/CategoriesBar";
 import DiscountsPromotions from "./components/DiscountsPromotions";
 import HomeSearchBar from "./components/HomeSearchBar";
+import SideBar from "./components/SideBar";
 
 export const metadata: Metadata = {
     title: "Home - mutti",
@@ -12,12 +13,15 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <main>
-            <CategoriesBar />
-            <HomeSearchBar />
-            <DiscountsPromotions />
-            <Categories />
-            <CTA />
-        </main>
+        <>
+            <main>
+                <CategoriesBar />
+                <HomeSearchBar />
+                <DiscountsPromotions />
+                <Categories />
+                <CTA />
+            </main>
+            <SideBar />
+        </>
     );
 }
