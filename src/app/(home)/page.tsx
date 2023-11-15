@@ -3,9 +3,7 @@
 import { useState } from "react";
 import CTA from "./components/CTA";
 import Categories from "./components/Categories";
-import CategoriesBar from "./components/CategoriesBar";
 import DiscountsPromotions from "./components/DiscountsPromotions";
-import HomeSearchBar from "./components/HomeSearchBar";
 import SideBar from "./components/SideBar";
 import SubCategoryBar from "./components/SubCategoryBar";
 import useSidebarModal from "@/hooks/useSidebarModal";
@@ -18,8 +16,6 @@ export default function Home() {
     return (
         <>
             <main>
-                <CategoriesBar />
-                <HomeSearchBar />
                 <DiscountsPromotions />
                 <Categories />
                 <CTA />

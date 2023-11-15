@@ -2,14 +2,14 @@ import { create } from "zustand";
 
 interface CategoriesModal {
     subIsOpen: boolean;
-    onOpen: () => void;
-    onClose: () => void;
+    subOnOpen: () => void;
+    subOnClose: () => void;
 }
 
 const useSubCategorybar = create<CategoriesModal>((set) => ({
     subIsOpen: false,
-    onOpen: () => set({ subIsOpen: true }),
-    onClose: () => set({ subIsOpen: false }),
+    subOnOpen: () => set({ subIsOpen: true }),
+    subOnClose: () => set({ subIsOpen: false }),
 }));
 
 export default useSubCategorybar;

@@ -6,6 +6,7 @@ export interface Category {
 
 interface SubCategoryItem {
     label: string;
+    subCategoryLink: string;
 }
 
 interface SubCategory {

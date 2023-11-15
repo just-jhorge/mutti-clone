@@ -4,83 +4,19 @@ import Link from "next/link";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import useSubCategorybar from "@/hooks/useSubCategorybar";
 import useSidebarModal from "@/hooks/useSidebarModal";
-import { SubCategories } from "../../../../types";
-
-const categories: SubCategories = {
-    "Baby and Child Health": {
-        categoryLink: "baby-and-child-health",
-        subCategories: [
-            { label: "Allergy and Hayfever" },
-            { label: "Colic Management" },
-            { label: "Fever and Pain" },
-            { label: "First Aid" },
-            { label: "Teething" },
-        ],
-    },
-    "Electrical Health and Diagnostics": {
-        categoryLink: "",
-        subCategories: [{ label: "Diabetes" }, { label: "Heart Health" }],
-    },
-    "Medicines and Treatments": {
-        categoryLink: "",
-        subCategories: [
-            { label: "Allergy and Hayfever" },
-            { label: "Cough Cold & Flu" },
-            { label: "Eye Care" },
-            { label: "First Aid" },
-            { label: "Pain" },
-            { label: "Skincare" },
-            { label: "Stomach and Bowel" },
-        ],
-    },
-    "Men's Health": {
-        categoryLink: "",
-        subCategories: [{ label: "Men's Health Supplements" }, { label: "Men's Sexual Health" }],
-    },
-    "Sexual Pleasure and Wellbeing": {
-        categoryLink: "",
-        subCategories: [
-            { label: "Condoms" },
-            { label: "Feminine Hygiene and Health" },
-            { label: "Lubricants and Gels" },
-        ],
-    },
-    "Travel Health": {
-        categoryLink: "",
-        subCategories: [
-            { label: "Antimalarials" },
-            { label: "Children's Travel Health" },
-            { label: "First Aid" },
-            { label: "Travel Sickness" },
-        ],
-    },
-    "Vitamins and Supplements": {
-        categoryLink: "",
-        subCategories: [
-            { label: "Bone Health" },
-            { label: "Digestive Health" },
-            { label: "Immune Health" },
-            { label: "Men's Health Supplements" },
-            { label: "Multivitamins" },
-            { label: "Women's Health Supplements" },
-        ],
-    },
-    "Women's Health": {
-        categoryLink: "",
-        subCategories: [
-            { label: "Menstrual Health" },
-            { label: "Morning After Pill" },
-            { label: "Thrush" },
-            { label: "Women's Health Supplements" },
-        ],
-    },
-};
+import { categories } from "@/lib/data";
 
 export default function SideBar({ open }: { open: boolean }) {
-    const { activeCategory } = useSidebarModal();
-    const { onClose } = useSubCategorybar();
+    const { activeCategory, onClose } = useSidebarModal();
+    const { subOnClose } = useSubCategorybar();
 
+    const mainLink = categories[activeCategory].categoryLink;
     const subCategory = categories[activeCategory].subCategories;
+
+    const closeModal = () => {
+        subOnClose();
+        onClose();
+    };
 
     return (
         <div
@@ -101,8 +37,8 @@ export default function SideBar({ open }: { open: boolean }) {
                 </li>
                 {subCategory.map((category, index) => (
                     <li key={index} className="py-4">
-                        <Link href="/" className="w-full">
-                            {category.label}
+                        <Link href={`/category/${mainLink}/subcategory/${category.subCategoryLink}`} className="w-full">
+                            <button onClick={closeModal}>{category.label}</button>
                         </Link>
                     </li>
                 ))}

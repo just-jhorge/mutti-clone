@@ -19,11 +19,11 @@ const categories = [
 
 export default function SideBar({ open }: { open: boolean }) {
     const { onClose, setActiveCategory } = useSidebarModal();
-    const { onOpen } = useSubCategorybar();
+    const { subOnOpen } = useSubCategorybar();
 
     const openSubCategoryBar = (category: string) => {
         setActiveCategory(category);
-        onOpen();
+        subOnOpen();
     };
 
     return (

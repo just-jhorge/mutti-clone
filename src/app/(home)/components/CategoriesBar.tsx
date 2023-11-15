@@ -1,8 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { IoMenuOutline } from "react-icons/io5";
 import Link from "next/link";
+import { IoMenuOutline } from "react-icons/io5";
 import useSidebarModal from "@/hooks/useSidebarModal";
 
 const categories = [
@@ -19,13 +18,13 @@ const CategoriesBar = () => {
     return (
         <section className="h-16 flex items-center justify-center text-sm">
             <div className="container flex items-center gap-10">
-                <Button
+                <button
                     onClick={() => onOpen()}
-                    className="flex items-center gap-2 bg-transparent shadow-none text-black font-normal hover:bg-transparent"
+                    className="flex items-center gap-2 bg-transparent shadow-none text-black font-normal hover:bg-transparent py-3"
                 >
                     <IoMenuOutline size={23} />
                     <p>All Categories</p>
-                </Button>
+                </button>
                 <ul className="flex items-center gap-5">
                     {categories.map((category) => (
                         <li key={category.value}>

@@ -1,15 +1,35 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
 import Image from "next/image";
-import { AiFillCaretDown } from "react-icons/ai";
+import { useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { AiFillCaretDown } from "react-icons/ai";
 import searchBanner from "../../../../public/images/search-banner.webp";
 
 const HomeSearchBar = () => {
+    const pathname = usePathname();
+
+    const atHomePage = (pathname: string) => {
+        if (pathname == "/") {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    useEffect(() => {
+        atHomePage(pathname);
+    }, [pathname]);
+
+    const displayImage = atHomePage(pathname);
+
     return (
-        <section className="relative bg-orange-light h-64 w-full py-12">
+        <section className={`${displayImage ? "h-64 py-12" : "h-auto py-10"} relative bg-orange-light w-full`}>
             <div className="container h-full w-full">
-                <div className="h-full w-full relative z-50 space-y-5">
-                    <div>
+                <div className="h-full w-full relative z-50">
+                    <div className={`${displayImage ? "block" : "hidden"} mb-5`}>
                         <h3 className="text-3xl font-bold">Affordable healthcare</h3>
                         <p className="text-sm">Make sure your kids are happy and healthy</p>
                     </div>
@@ -28,7 +48,7 @@ const HomeSearchBar = () => {
                             <div className="flex items-center gap-2">
                                 <CiSearch className="text-gray-600" size={23} />
                                 <input
-                                    className="placeholder:text-[10px] w-full outline-none text-sm text-slate-900"
+                                    className="placeholder:text-[10px] w-full outline-none text-sm text-slate-900 appearance-none"
                                     type="search"
                                     placeholder="eg. Paracetamol, etc.."
                                 />
@@ -46,7 +66,7 @@ const HomeSearchBar = () => {
                 </div>
             </div>
             <Image
-                className="absolute h-full w-1/2 z-30 top-0 bottom-0 right-20"
+                className={`absolute h-full ${displayImage ? "w-1/2 right-20" : "w-1/3 right-40"} z-30 top-0 bottom-0`}
                 src={searchBanner}
                 alt="Childcare banner"
             />
