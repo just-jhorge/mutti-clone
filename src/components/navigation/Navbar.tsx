@@ -24,7 +24,7 @@ export default function Navbar() {
                     <div className="relative w-24 h-8">
                         <Image fill src={logo} alt="mutti" />
                     </div>
-                    <ul className="flex items-center gap-6">
+                    <ul className="hidden md:flex items-center gap-6">
                         {navigationLinks.map((item) => {
                             const isActive = pathname === item.value;
 
@@ -38,7 +38,7 @@ export default function Navbar() {
                         })}
                     </ul>
                 </div>
-                <div className="flex items-center divide-x-2 gap-5">
+                <div className="hidden md:flex items-center divide-x-2 gap-5">
                     <div className="flex items-center gap-1">
                         <p>Login</p>
                         <span>/</span>
@@ -46,14 +46,14 @@ export default function Navbar() {
                             Become a mutti member
                         </Button>
                     </div>
-                    <div>country selector</div>
-                    <div className="flex items-center gap-1">
-                        <AiOutlineShoppingCart size={20} />
-                        <div className="h-5 w-5 text-xs rounded-full flex items-center justify-center bg-red-500 text-white">
-                            0
-                        </div>
-                        <p>items</p>
+                </div>
+                <div>country selector</div>
+                <div className="flex items-center gap-1">
+                    <AiOutlineShoppingCart size={20} />
+                    <div className="h-5 w-5 text-xs rounded-full flex items-center justify-center bg-red-500 text-white">
+                        0
                     </div>
+                    <p>items</p>
                 </div>
             </div>
         </nav>
