@@ -7,7 +7,7 @@ import useSubCategorybar from "@/hooks/useSubCategorybar";
 import CategoriesBar from "./components/CategoriesBar";
 import HomeSearchBar from "./components/HomeSearchBar";
 
-export default function layout({ children }: { children: React.ReactNode }) {
+export default function HomeLayout({ children }: { children: React.ReactNode }) {
     const { isOpen, activeCategory } = useSidebarModal();
     const { subIsOpen } = useSubCategorybar();
 
