@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <footer className="h-auto bg-orange-light py-10">
             <div className="container space-y-8">
-                <div className="grid grid-cols-6 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
                     <div className="flex flex-col items-start gap-4">
                         <div className="relative w-24 h-8">
                             <Image fill src={logo} alt="mutti" />
