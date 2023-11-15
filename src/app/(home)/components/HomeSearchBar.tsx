@@ -26,11 +26,7 @@ const HomeSearchBar = () => {
     const displayImage = atHomePage(pathname);
 
     return (
-<<<<<<< HEAD
         <section className={`${displayImage ? "h-64 py-12" : "h-auto py-10"} relative bg-orange-light w-full`}>
-=======
-        <section className="relative bg-orange-light h-auto md:h-64 w-full py-12">
->>>>>>> 868480b0f316eca9c2c2f27642b4537306bedc2c
             <div className="container h-full w-full">
                 <div className="h-full w-full relative z-50">
                     <div className={`${displayImage ? "block" : "hidden"} mb-5`}>
@@ -47,17 +43,6 @@ const HomeSearchBar = () => {
                                 </span>
                             </p>
                         </div>
-<<<<<<< HEAD
-                        <div className="flex-1 space-y-0.5 pl-4">
-                            <p className="text-xs text-gray-400">What are you looking for?</p>
-                            <div className="flex items-center gap-2">
-                                <CiSearch className="text-gray-600" size={23} />
-                                <input
-                                    className="placeholder:text-[10px] w-full outline-none text-sm text-slate-900 appearance-none"
-                                    type="search"
-                                    placeholder="eg. Paracetamol, etc.."
-                                />
-=======
                         <div className="w-full flex items-center divide-x-2">
                             <div className="flex-1 space-y-0.5">
                                 <p className="text-xs text-gray-400">What are you looking for?</p>
@@ -77,18 +62,13 @@ const HomeSearchBar = () => {
                                 >
                                     <CiSearch size={28} />
                                 </Button>
->>>>>>> 868480b0f316eca9c2c2f27642b4537306bedc2c
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <Image
-<<<<<<< HEAD
                 className={`absolute h-full ${displayImage ? "w-1/2 right-20" : "w-1/3 right-40"} z-30 top-0 bottom-0`}
-=======
-                className="absolute hidden md:block h-full w-1/2 z-30 top-0 bottom-0 right-20"
->>>>>>> 868480b0f316eca9c2c2f27642b4537306bedc2c
                 src={searchBanner}
                 alt="Childcare banner"
             />
