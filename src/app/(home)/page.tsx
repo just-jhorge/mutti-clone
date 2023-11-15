@@ -7,13 +7,13 @@ import CategoriesBar from "./components/CategoriesBar";
 import DiscountsPromotions from "./components/DiscountsPromotions";
 import HomeSearchBar from "./components/HomeSearchBar";
 import SideBar from "./components/SideBar";
+import SubCategoryBar from "./components/SubCategoryBar";
+import useSidebarModal from "@/hooks/useSidebarModal";
+import useSubCategorybar from "@/hooks/useSubCategorybar";
 
 export default function Home() {
-    const [sideOpened, setSideOpened] = useState(false);
-
-    // const toggleSideBar = () => {
-    //     setSideOpened(true);
-    // };
+    const { isOpen } = useSidebarModal();
+    const { subIsOpen } = useSubCategorybar();
 
     return (
         <>
@@ -24,7 +24,8 @@ export default function Home() {
                 <Categories />
                 <CTA />
             </main>
-            <SideBar open={sideOpened} />
+            <SideBar open={isOpen} />
+            <SubCategoryBar open={subIsOpen} />
         </>
     );
 }
