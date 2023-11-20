@@ -33,7 +33,7 @@ const categories: Category[] = [
 const Categories = () => {
     return (
         <section className="py-12">
-            <div className="container space-y-5">
+            <div className="space-y-5">
                 <h3 className="text-2xl font-bold">
                     Hi there, <br /> what are you looking for?
                 </h3>

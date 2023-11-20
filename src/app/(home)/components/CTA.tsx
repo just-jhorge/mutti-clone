@@ -10,7 +10,7 @@ import deliveries from "../../../../public/images/free-deliveries.webp";
 const CTA = () => {
     return (
         <section className="py-7 md:py-12">
-            <div className="md:container h-auto md:h-80 rounded-sm overflow-hidden">
+            <div className="h-auto md:h-80 rounded-sm overflow-hidden">
                 <div className="relative w-full h-full bg-cta px-5 md:px-16 py-10 md:py-0 flex flex-col items-start justify-center gap-5">
                     <h3 className="text-2xl md:text-3xl max-w-[15rem] md:max-w-sm font-semibold">
                         Enjoy unbeatable discounts and great healthcare access by joining mutti.

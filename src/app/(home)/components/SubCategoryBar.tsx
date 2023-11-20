@@ -24,7 +24,7 @@ export default function SideBar({ open }: { open: boolean }) {
         >
             <ul className="divide-y text-sm">
                 <li className="py-4">
-                    <button className="flex items-center gap-1" onClick={() => onClose()}>
+                    <button className="flex items-center gap-1" onClick={() => subOnClose()}>
                         <IoIosArrowRoundBack />
                         <p className="text-xs">Back</p>
                     </button>

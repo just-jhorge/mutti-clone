@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button";
 
 const categories = [
     { label: "Baby & Child Health", value: "baby-and-child-health" },
-    { label: "Medicines & Treatment", value: "medicines-and-treatment" },
+    { label: "Medicines & Treatments", value: "medicines-and-treatments" },
     { label: "Sexual Health", value: "sexual-pleasure-and-wellbeing" },
-    { label: "Supplements", value: "vitamins-and-supplements" },
+    { label: "Vitamins and Supplements", value: "vitamins-and-supplements" },
     { label: "Women's Health", value: "women's-health" },
 ];
 
 const CategoriesBar = () => {
-    const { onOpen } = useSidebarModal();
+    const { onOpen, setActiveCategory } = useSidebarModal();
 
     return (
         <section className="h-16 flex items-center justify-center text-sm">
@@ -26,13 +26,15 @@ const CategoriesBar = () => {
                     <IoMenuOutline size={23} />
                     <p>All Categories</p>
                 </Button>
-                <ul className="h-full w-full py-6 md:py-0 flex items-center gap-5 overflow-scroll md:overflow-hidden scroll whitespace-nowrap">
-                    <button onClick={() => onOpen()} className="flex md:hidden">
+                <ul className="h-full w-full py-6 lg:py-0 flex items-center gap-5 overflow-scroll lg:overflow-hidden scroll whitespace-nowrap">
+                    <button onClick={() => onOpen()} className="flex lg:hidden">
                         Browse all categories
                     </button>
                     {categories.map((category) => (
                         <li key={category.value}>
-                            <Link href={`/category/${category.value}`}>{category.label}</Link>
+                            <button onClick={() => setActiveCategory(category.label)}>
+                                <Link href={`/category/${category.value}`}>{category.label}</Link>
+                            </button>
                         </li>
                     ))}
                 </ul>

@@ -1,7 +1,7 @@
 import { SubCategories } from "../../types";
 
 export const categories: SubCategories = {
-    "Baby and Child Health": {
+    "Baby & Child Health": {
         categoryLink: "baby-and-child-health",
         subCategories: [
             { label: "Allergy and Hayfever", subCategoryLink: "/allergy-and-hayfever" },
@@ -18,7 +18,7 @@ export const categories: SubCategories = {
             { label: "Heart Health", subCategoryLink: "/heart-health" },
         ],
     },
-    "Medicines and Treatments": {
+    "Medicines & Treatments": {
         categoryLink: "medicines-and-treatments",
         subCategories: [
             { label: "Allergy and Hayfever", subCategoryLink: "/allergy-and-hayfever" },
@@ -37,7 +37,7 @@ export const categories: SubCategories = {
             { label: "Men's Sexual Health", subCategoryLink: "/men's-sexual-health" },
         ],
     },
-    "Sexual Pleasure and Wellbeing": {
+    "Sexual Health": {
         categoryLink: "sexual-pleasure-and-wellbeing",
         subCategories: [
             { label: "Condoms", subCategoryLink: "/condoms" },

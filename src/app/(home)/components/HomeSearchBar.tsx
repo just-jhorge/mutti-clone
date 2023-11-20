@@ -43,13 +43,13 @@ const HomeSearchBar = () => {
                                 </span>
                             </p>
                         </div>
-                        <div className="w-full flex items-center divide-x-2">
+                        <div className="w-full flex items-center divide-x-2 md:pl-4">
                             <div className="flex-1 space-y-0.5">
                                 <p className="text-xs text-gray-400">What are you looking for?</p>
                                 <div className="flex items-center gap-2">
                                     <CiSearch className="text-gray-600" size={23} />
                                     <input
-                                        className="placeholder:text-[10px] w-full outline-none text-sm text-slate-900"
+                                        className="placeholder:text-[10px] w-full outline-none text-sm text-slate-900 appearance-none"
                                         type="search"
                                         placeholder="eg. Paracetamol, etc.."
                                     />
@@ -68,7 +68,9 @@ const HomeSearchBar = () => {
                 </div>
             </div>
             <Image
-                className={`absolute h-full ${displayImage ? "w-1/2 right-20" : "w-1/3 right-40"} z-30 top-0 bottom-0`}
+                className={`absolute hidden md:block h-full ${
+                    displayImage ? "w-1/2 right-20" : "w-1/3 right-40"
+                } z-30 top-0 bottom-0`}
                 src={searchBanner}
                 alt="Childcare banner"
             />

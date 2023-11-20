@@ -9,7 +9,7 @@ interface CategoriesModal {
 }
 
 const useSidebarModal = create<CategoriesModal>((set) => ({
-    activeCategory: "Baby and Child Health",
+    activeCategory: "Baby & Child Health",
     isOpen: false,
     onOpen: () => set({ isOpen: true }),
     onClose: () => set({ isOpen: false }),

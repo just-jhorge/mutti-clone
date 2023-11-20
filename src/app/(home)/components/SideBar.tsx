@@ -7,11 +7,11 @@ import useSidebarModal from "@/hooks/useSidebarModal";
 import useSubCategorybar from "@/hooks/useSubCategorybar";
 
 const categories = [
-    { label: "Baby and Child Health" },
+    { label: "Baby & Child Health" },
     { label: "Electrical Health and Diagnostics" },
-    { label: "Medicines and Treatments" },
+    { label: "Medicines & Treatments" },
     { label: "Men's Health" },
-    { label: "Sexual Pleasure and Wellbeing" },
+    { label: "Sexual Health" },
     { label: "Travel Health" },
     { label: "Vitamins and Supplements" },
     { label: "Women's Health" },

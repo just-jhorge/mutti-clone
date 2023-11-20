@@ -3,7 +3,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 const DiscountsPromotions = () => {
     return (
         <section className="py-12">
-            <div className="container space-y-3">
+            <div className="space-y-3">
                 <h3 className="text-xl md:text-2xl font-bold">Discounts and promotions</h3>
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
                     <p className="text-xs md:text-sm">Enjoy unbeatable discounts and promotions. Sign up to qualify!</p>

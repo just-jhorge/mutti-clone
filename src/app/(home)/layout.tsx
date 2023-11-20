@@ -17,8 +17,8 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
         <>
             <CategoriesBar />
             <HomeSearchBar />
-            <main className="py-12">
-                {pathname !== "/" && <h3 className="text-3xl font-bold mb-5">{activeCategory}</h3>}
+            <main className="container py-12">
+                {pathname !== "/" && <h3 className="text-2xl md:text-3xl font-bold mb-5">{activeCategory}</h3>}
                 {children}
             </main>
             <SideBar open={isOpen} />
