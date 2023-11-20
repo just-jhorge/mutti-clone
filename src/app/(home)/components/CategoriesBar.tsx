@@ -26,7 +26,7 @@ const CategoriesBar = () => {
                     <IoMenuOutline size={23} />
                     <p>All Categories</p>
                 </Button>
-                <ul className="h-full w-full py-6 md:py-0 flex items-center gap-5 overflow-scroll whitespace-nowrap">
+                <ul className="h-full w-full py-6 md:py-0 flex items-center gap-5 overflow-scroll md:overflow-hidden scroll whitespace-nowrap">
                     <button onClick={() => onOpen()} className="flex md:hidden">
                         Browse all categories
                     </button>

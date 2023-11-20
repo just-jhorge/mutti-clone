@@ -38,22 +38,24 @@ export default function Navbar() {
                         })}
                     </ul>
                 </div>
-                <div className="hidden md:flex items-center divide-x-2 gap-5">
+                <div className="flex items-center justify-center gap-5">
+                    <div className="hidden md:flex items-center divide-x-2 gap-5">
+                        <div className="flex items-center gap-1">
+                            <p>Login</p>
+                            <span>/</span>
+                            <Button className="bg-yellow-500/70 hover:bg-yellow-500 transition text-white rounded-md">
+                                Become a mutti member
+                            </Button>
+                        </div>
+                    </div>
+                    <div>country selector</div>
                     <div className="flex items-center gap-1">
-                        <p>Login</p>
-                        <span>/</span>
-                        <Button className="bg-yellow-500/70 hover:bg-yellow-500 transition text-white rounded-md">
-                            Become a mutti member
-                        </Button>
+                        <AiOutlineShoppingCart size={20} />
+                        <div className="h-5 w-5 text-xs rounded-full flex items-center justify-center bg-red-500 text-white">
+                            0
+                        </div>
+                        <p>items</p>
                     </div>
-                </div>
-                <div>country selector</div>
-                <div className="flex items-center gap-1">
-                    <AiOutlineShoppingCart size={20} />
-                    <div className="h-5 w-5 text-xs rounded-full flex items-center justify-center bg-red-500 text-white">
-                        0
-                    </div>
-                    <p>items</p>
                 </div>
             </div>
         </nav>

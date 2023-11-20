@@ -16,7 +16,7 @@ const DiscountsPromotions = () => {
                         </button>
                     </div>
                 </div>
-                <div className="h-64 bg-green-500">splide component goes here</div>
+                <div className="h-80 bg-green-500">splide component goes here</div>
             </div>
         </section>
     );
