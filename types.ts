@@ -20,7 +20,6 @@ export interface SubCategories {
 
 export type Medication = {
     name: string;
-    dosage: string;
     discount?: number;
     price: number;
     category: string;

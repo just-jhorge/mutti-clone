@@ -17,9 +17,14 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
         <>
             <CategoriesBar />
             <HomeSearchBar />
-            <main className="py-12 bg-gray-50">
+            <main className="py-10 bg-gray-50">
                 <div className="container">
-                    {pathname !== "/" && <h3 className="text-2xl md:text-3xl font-bold mb-5">{activeCategory}</h3>}
+                    {pathname !== "/" && (
+                        <div className="space-y-5 mb-10">
+                            <div>Home / Search Results / {activeCategory}</div>
+                            <h3 className="text-2xl md:text-3xl font-bold">{activeCategory}</h3>
+                        </div>
+                    )}
                     {children}
                 </div>
             </main>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
 import React from "react";
+import { formatCurrency } from "@/lib/utils";
 
 interface DrugCardProps {
     name: string;
@@ -20,7 +21,7 @@ const DrugCard: React.FC<DrugCardProps> = ({ name, price, discount }) => {
                 <div className="h-2/5 flex flex-col items-start justify-end space-y-2">
                     <div className="space-y-2.5">
                         <h4 className="text-base">{name}</h4>
-                        <p className="font-semibold">GHC {price}</p>
+                        <p className="font-semibold">{formatCurrency(price)}</p>
                     </div>
                     <button
                         className="flex items-center gap-1 bg-gray-300 hover:bg-yellow-400 hover:text-white transition duration-200 p-3 rounded-sm text-sm"

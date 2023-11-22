@@ -19,6 +19,7 @@ const navigationLinks = [
 export default function Navbar() {
     const pathname = usePathname();
 
+    // TODO: Add hamburger menu button for smaller screens
     return (
         <nav className="w-full h-28 border-b border-gray-200">
             <div className="container w-full h-full flex items-center justify-between">
