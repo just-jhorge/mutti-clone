@@ -11,8 +11,8 @@ export default function Page() {
     return (
         // TODO: Implement Pagination
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {medicines.map((medicine) => (
-                <DrugCard name={medicine.name} price={medicine.price} discount={medicine.discount} />
+            {medicines.map((medicine, index) => (
+                <DrugCard key={index} name={medicine.name} price={medicine.price} discount={medicine.discount} />
             ))}
         </div>
     );
