@@ -6,7 +6,7 @@ import useSidebarModal from "@/hooks/useSidebarModal";
 import { medications } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
-export default function page() {
+export default function Page() {
     const pathname = usePathname();
     const pathnameArray = pathname.split("/");
     const activeSubCategory = pathnameArray[pathnameArray.length - 1];
