@@ -17,7 +17,7 @@ const CategoriesBar = () => {
     const { onOpen, setActiveCategory } = useSidebarModal();
 
     return (
-        <section className="h-16 flex items-center justify-center text-sm">
+        <section className="h-16 flex items-center justify-center text-base text-slate-800">
             <div className="container flex items-center gap-2 md:gap-10">
                 <Button
                     onClick={() => onOpen()}

@@ -44,18 +44,18 @@ const HomeSearchBar = () => {
                             </p>
                         </div>
                         <div className="w-full flex items-center divide-x-2 md:pl-4">
-                            <div className="flex-1 space-y-0.5">
+                            <div className="flex-1 space-y-0.5 mr-2 lg:mr-0">
                                 <p className="text-xs text-gray-400">What are you looking for?</p>
                                 <div className="flex items-center gap-2">
                                     <CiSearch className="text-gray-600" size={23} />
                                     <input
-                                        className="placeholder:text-[10px] w-full outline-none text-sm text-slate-900 appearance-none"
+                                        className="placeholder:text-[10px] w-full outline-none text-base bg-transparent text-slate-900 appearance-none"
                                         type="search"
                                         placeholder="eg. Paracetamol, etc.."
                                     />
                                 </div>
                             </div>
-                            <div className="pl-4">
+                            <div className="pl-2 lg:pl-4">
                                 <Button
                                     size="icon"
                                     className="bg-yellow-500/80 hover:bg-yellow-500 text-white rounded-lg h-12 w-12"
