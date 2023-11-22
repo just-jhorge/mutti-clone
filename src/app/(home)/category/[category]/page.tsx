@@ -4,7 +4,7 @@ import { medications } from "@/lib/data";
 import DrugCard from "../../components/DrugCard";
 import useSidebarModal from "@/hooks/useSidebarModal";
 
-export default function page() {
+export default function Page() {
     const { activeCategory } = useSidebarModal();
     const medicines = medications[activeCategory];
 
