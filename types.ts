@@ -17,3 +17,15 @@ interface SubCategory {
 export interface SubCategories {
     [category: string]: SubCategory;
 }
+
+export type Medication = {
+    name: string;
+    dosage: string;
+    discount?: number;
+    price: number;
+    category: string;
+};
+
+export type MedicationCategory = {
+    [category: string]: Medication[];
+};
