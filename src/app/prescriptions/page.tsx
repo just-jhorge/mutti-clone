@@ -68,7 +68,7 @@ export default function page() {
                         />
                     </div>
                     <div className="flex flex-col items-start justify-center w-full mb-6">
-                        <label className="block mb-2 text-sm font-medium text-gray-900">Hello</label>
+                        <label className="block mb-2 text-sm font-medium text-gray-900">Upload your prescription</label>
                         <label
                             htmlFor="dropzone-file"
                             className="flex flex-col items-center justify-center w-full h-64 border-2 border-blue-500 border-dashed rounded-sm cursor-pointer"
