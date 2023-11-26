@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { FaAngleDown } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import { HiOutlineMenuAlt2 } from "react-icons/hi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
+import { Button } from "../ui/button";
 import logo from "../../../public/images/logo.svg";
 import ghanaFlag from "../../../public/images/ghana-flag.svg";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Button } from "../ui/button";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { FaAngleDown } from "react-icons/fa";
-import { HiOutlineMenuAlt2 } from "react-icons/hi";
 
 const navigationLinks = [
     { label: "Home", value: "/" },
@@ -25,11 +26,11 @@ export default function Navbar() {
         <nav className="w-full h-28 border-b border-gray-200">
             <div className="container w-full h-full flex items-center justify-between">
                 <div className="flex items-center lg:items-end gap-3 lg:gap-10">
-                    <button>
+                    <button className="block lg:hidden">
                         <HiOutlineMenuAlt2 size={26} />
                     </button>
                     <Link href="/">
-                        <div className="relative w-24 h-8 -translate-y-1.5">
+                        <div className="relative w-24 h-8 -translate-y-1.5 lg:translate-y-0">
                             <Image fill src={logo} alt="mutti" />
                         </div>
                     </Link>
@@ -72,7 +73,3 @@ export default function Navbar() {
         </nav>
     );
 }
-
-const MobileSideNav = () => {
-    return <div>Hello</div>;
-};

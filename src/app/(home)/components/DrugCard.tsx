@@ -1,6 +1,6 @@
+import React from "react";
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
-import React from "react";
 import { formatCurrency } from "@/lib/utils";
 
 interface DrugCardProps {
