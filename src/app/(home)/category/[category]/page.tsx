@@ -42,18 +42,18 @@ export default function Page() {
             <div className="w-full flex items-center justify-center">
                 <ReactPaginate
                     breakLabel="..."
-                    previousLinkClassName="hidden"
-                    nextLinkClassName="hidden"
+                    nextLabel=">"
+                    previousLabel="<"
                     breakLinkClassName="h-full w-full bg-red-500"
-                    activeClassName={activePage}
-                    containerClassName={containerClass}
-                    previousClassName={pageLinkClass}
-                    nextClassName={pageLinkClass}
-                    pageClassName={pageLinkClass}
-                    onPageChange={handlePageClick}
                     pageCount={pageCount}
                     pageRangeDisplayed={5}
                     renderOnZeroPageCount={null}
+                    activeClassName={activePage}
+                    nextClassName={pageLinkClass}
+                    pageClassName={pageLinkClass}
+                    onPageChange={handlePageClick}
+                    previousClassName={pageLinkClass}
+                    containerClassName={containerClass}
                 />
             </div>
         </>
